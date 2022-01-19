@@ -1,9 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Home from './Components/Home/Home';
+import Navigation from './Components/Navigation/Navigation';
 
-function App() {
+const App = () => {
   return (
-    <h1>NASA STUFF</h1>
+    <div>
+      <Navigation />
+      <Home />
+    </div>
   );
 }
 

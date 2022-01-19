@@ -1,0 +1,10 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+}
+
+.navigation h3 {
+    padding-left: 25px;
+    padding-top: 14px;
+}
