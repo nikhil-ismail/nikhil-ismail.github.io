@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ImageModal from '../Modal/ImageModal';
 import './ImageCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
@@ -7,12 +6,7 @@ import { faHeart as farHear } from '@fortawesome/free-regular-svg-icons'
 
 const ImageCard = (props) => {
 
-    const [modalShow, setModalShow] = useState(false);
     const [like, setLike] = useState(false);
-
-    const toggleModal = () => {
-        //setModalShow(!modalShow);
-    }
 
     const toggleLike = () => {
         setLike(!like);
@@ -20,7 +14,7 @@ const ImageCard = (props) => {
 
     return (
         <div className="card-container">
-            <img className="card-img" onClick={toggleModal} onDoubleClick={toggleLike} src={props.image.hdurl} alt="Astronomy Picture of the Day" />
+            <img className="card-img" onDoubleClick={props.toggleLike} src={props.image.hdurl} alt="Astronomy Picture of the Day" />
             <div className="card-caption">
                 {
                     like ?
@@ -33,10 +27,6 @@ const ImageCard = (props) => {
                     <p>{props.image.date}</p>
                 </div>
             </div>
-            {
-                modalShow &&
-                <ImageModal image={props.image.hdurl} show={modalShow} toggleModal={toggleModal} />
-            }
         </div>
     );
 }

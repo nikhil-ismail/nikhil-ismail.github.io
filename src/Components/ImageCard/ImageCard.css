@@ -18,14 +18,13 @@
 }
 
 .card-caption {
-    width: 340px;
-    margin-left: 12px;
+    margin-left: 18px;
     display: flex;
     flex-direction: row;
 }
 
 .caption-text {
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .favIcon {

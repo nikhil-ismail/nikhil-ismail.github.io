@@ -1,26 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import './Home.css';
 import ImageCard from '../ImageCard/ImageCard';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { TailSpin } from  'react-loader-spinner'
 
-const Home = () => {
-    
-    const [images, setImages] = useState([]);
+const Home = (props) => {
 
-    useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=dr2NFZTYBrLLNuElDHFsKQOL8tCi1KcaZGe5OnkQ&count=20`)
-        .then(response => {
-            console.log(response.data);
-            setImages(response.data);
-        })
-        .catch(err => {
-            console.log(err);
-        })
-      }, [])
+    const { loading, images } = props;
 
     return (
         <div className="home-container">
             {
+                loading ?
+                <div className="loadingContainer">
+                    <h2>Loading...</h2>
+                    <TailSpin color="#00BFFF" height={60} width={60} />
+                </div>
+                :
                 images.map((image, index) => {
                     return (
                         <ImageCard key={index} image={image} />

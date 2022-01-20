@@ -4,4 +4,12 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding-top: 25px;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
