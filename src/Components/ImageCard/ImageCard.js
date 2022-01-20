@@ -14,7 +14,7 @@ const ImageCard = (props) => {
 
     return (
         <div className="card-container">
-            <img className="card-img" onDoubleClick={props.toggleLike} src={props.image.hdurl} alt="Astronomy Picture of the Day" />
+            <img className="card-img" onDoubleClick={toggleLike} src={props.image.hdurl} alt="Astronomy Picture of the Day" />
             <div className="card-caption">
                 {
                     like ?
