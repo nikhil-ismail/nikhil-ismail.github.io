@@ -1,6 +1,6 @@
 ## Link to Hosted Code
 
-http://nikhil-ismail.github.io/shopify-frontend-challenge-summer-2022
+http://nikhil-ismail.github.io/spacestagram
 
 ## Features
 
